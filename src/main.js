@@ -5,6 +5,7 @@ import fastclick from 'fastclick'
 import router from './router'
 import 'common/stylus/index.styl'
 import VueLazyLoad from 'vue-lazyload'
+import store  from './store'
 Vue.config.productionTip = false
 
 Vue.use(VueLazyLoad, {
@@ -15,5 +16,6 @@ fastclick.attach(document.body)// 把这个点击事件加到body节点上，整
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })
